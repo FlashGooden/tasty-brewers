@@ -1,0 +1,102 @@
+@import "../../helpers";
+.nav-section {
+   padding-top: 20px;
+   padding-bottom: 20px;
+   background-color: #f9f9f9;
+   position: relative;
+   display: block;
+
+   @include sm {
+      background: yellow;
+   }
+   @include md {
+      background: blue;
+   }
+   .container {
+      max-width: 1200px;
+      margin-right: auto;
+      margin-left: 60px;
+      padding-right: 15px;
+      padding-left: 15px;
+      opacity: 1;
+      transition-property: opacity;
+      transition-duration: 400ms;
+      transition-timing-function: ease;
+
+      .nav-wrapper {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         flex-wrap: nowrap;
+         position: static;
+         text-align: left;
+         position: static;
+
+         .brand {
+            position: relative;
+            display: block;
+            width: 90px;
+            background: red;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            border: 2px solid red;
+
+            img {
+               display: inline-block;
+               transform: scale(1);
+               position: static;
+            }
+
+            .tasty-text {
+               display: none;
+               overflow: visible;
+
+               @include md {
+                  display: block;
+                  position: absolute;
+                  // top: 29%;
+                  right: -109px;
+                  bottom: -75%;
+                  margin-left: 0px;
+                  padding-left: 0px;
+               }
+            }
+         }
+
+         .cart-nav-wrapper {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          width: 65vw;
+          justify-content: flex-end;
+          .nav-menu {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            object-fit: fill;
+            display: none;
+
+            @include md {
+              width: 100vw;
+              padding-top: 10px;
+              padding-bottom: 10px;
+              background-color: hsla(0, 78.72%, 63.14%, 1.00);
+           
+              display: flex;
+              .nav-links {
+                margin-left: 20px;
+                margin-right: 20px;
+              }
+              // position: relative;
+            }
+          }
+         }
+      }
+   }
+
+   .container:medium {
+      padding-right: 15px;
+      padding-left: 15px;
+   }
+}
