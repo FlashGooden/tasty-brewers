@@ -1,0 +1,39 @@
+@import "../../helpers";
+
+.hero-section {
+   min-height: 550px;
+   background-image: linear-gradient(
+         360deg,
+         hsla(0, 0%, 13.33%, 1),
+         hsla(0, 0%, 13.33%, 0)
+      ),
+      url("../../assets/hero-pour.jpg");
+   background-position: 0px 0px, 61% 50%;
+   background-size: auto, 100vw;
+   background-repeat: repeat, repeat-y;
+   .container {
+      max-width: 1200px;
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: 15px;
+      padding-left: 15px;
+      opacity: 1;
+      transition-property: opacity;
+      transition-duration: 400ms;
+      transition-timing-function: ease;
+
+      .hero-wrapper {
+         padding-bottom: 45px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: flex-start;
+         min-height: 550px;
+         padding-bottom: 45px;
+
+         @include md {
+           justify-content: flex-end;
+         }
+      }
+   }
+}
