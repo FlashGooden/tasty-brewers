@@ -6,12 +6,7 @@
    position: relative;
    display: block;
 
-   @include sm {
-      background: yellow;
-   }
-   @include md {
-      background: blue;
-   }
+  
    .container {
       max-width: 1200px;
       margin-right: auto;
@@ -31,6 +26,7 @@
          position: static;
          text-align: left;
          position: static;
+         margin-right: 20px;
 
          .brand {
             position: relative;
@@ -65,32 +61,45 @@
          }
 
          .cart-nav-wrapper {
-          display: flex;
-          align-items: center;
-          flex-direction: row;
-          width: 65vw;
-          justify-content: flex-end;
-          .nav-menu {
-            flex-grow: 0;
-            flex-shrink: 1;
-            flex-basis: auto;
-            object-fit: fill;
-            display: none;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            width: 55vw;
 
-            @include md {
-              width: 100vw;
-              padding-top: 10px;
-              padding-bottom: 10px;
-              background-color: hsla(0, 78.72%, 63.14%, 1.00);
-           
-              display: flex;
-              .nav-links {
-                margin-left: 20px;
-                margin-right: 20px;
-              }
-              // position: relative;
+            .nav-menu {
+               flex-grow: 0;
+               flex-shrink: 1;
+               flex-basis: auto;
+               object-fit: fill;
+               display: none;
+
+               @include md {
+                  width: 100vw;
+                  padding-top: 10px;
+                  padding-bottom: 10px;
+                  background-color: hsla(0, 78.72%, 63.14%, 1);
+                  display: flex;
+                  justify-content: flex-end;
+                  .nav-links {
+                     display: flex;
+                     flex-direction: column;
+                     flex-basis: 100%;
+                     flex: 0.5;
+                     margin-left: 20px;
+                     margin-right: 20px;
+                     text-decoration: none;
+                  }
+                  // position: relative;
+               }
             }
-          }
+            .cart-button {
+              position: absolute;
+              right: 10%;
+
+              @include md {
+                position: static;
+              }
+            }
          }
       }
    }

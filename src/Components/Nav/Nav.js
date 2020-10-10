@@ -17,6 +17,7 @@ export default function Nav() {
                     <a className= 'nav-links' href="/">Shop</a>
                     <a className= 'nav-links' href="/">Donate</a>
                   </div>
+                  <div className="cart-button">cart</div>
                </div>
             </div>
          </div>
