@@ -1,13 +1,18 @@
 import React from 'react';
 import './App.scss';
-import Nav from './Components/Nav/Nav'
-import Hero from './Components/Hero/Hero'
+import theme from './theme'
+import AppWrapper from './AppWrapper'
+import { ThemeProvider, CSSReset } from "@chakra-ui/core";
+
+
 
 function App() {
   return (
     <div className="App">
-      <Nav />
-      <Hero />
+      <ThemeProvider >
+          <CSSReset theme={theme}/>
+          <AppWrapper />
+      </ThemeProvider>
     </div>
   );
 }
