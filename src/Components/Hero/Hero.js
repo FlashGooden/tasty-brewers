@@ -2,16 +2,10 @@ import React from "react";
 import "./Hero.scss";
 import HeroImage from "../../assets/hero-pour.jpg";
 import {
-   ThemeProvider,
-   CSSReset,
-   theme,
-   Grid,
    Box,
    Text,
-   InputGroup,
    Flex,
    Image,
-   Icon,
    Heading,
    Button,
 } from "@chakra-ui/core";

@@ -1,13 +1,8 @@
 import React from "react";
 import "./Nav.scss";
 import {
-   ThemeProvider,
-   CSSReset,
-   theme,
-   Grid,
    Box,
    Text,
-   InputGroup,
    Flex,
    Icon,
 } from "@chakra-ui/core";
