@@ -56,7 +56,7 @@ export const Nav2 = () => (
       >
          <Flex
             flexDirection="row"
-            width= {['50%','50%','30%']}
+            width={["50%", "50%", "30%"]}
             justifyContent="flex-start"
             alignItems="center"
             color="blackAlpha.900"
@@ -68,8 +68,13 @@ export const Nav2 = () => (
          <Flex
             flexDirection="row"
             width="60%"
-            justifyContent="space-between"
-            display='flex'
+            justifyContent={[
+               "flex-end",
+               "flex-end",
+               "flex-end",
+               "space-between",
+            ]}
+            display="flex"
             p={0}
             mr={2}
             alignItems="center"
@@ -80,6 +85,7 @@ export const Nav2 = () => (
                flexDirection="row"
                width="90%"
                color="pink.500"
+               display={["none", "none", "none", "flex"]}
             >
                <Text>Home</Text>
                <Text>About</Text>
