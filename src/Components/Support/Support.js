@@ -2,62 +2,76 @@ import React from "react";
 import { Box, Text, Heading, Flex, Icon } from "@chakra-ui/core";
 
 export default function Support() {
-  const boxItems = [
-    {cardnum: "01",title:'SHOP PRODUCTS', description: "Our full product line is still available online here on our site! Hit our store to order some of the best beans around."},
-    {cardnum: "02",title:'DONATE', description: "Since we've changed the way we operate to online only, and to ensure your safety, not all our staff is working. Donate to keep them afloat."},
-    {cardnum: "03",title:'BUY GIFT CARDS', description: "Feeling generous and what someone to experience the great flavors? Buy a gift card for someone looking to get a kick."},
-   
-  ]
+   const boxItems = [
+      {
+         cardnum: "01",
+         title: "SHOP PRODUCTS",
+         description:
+            "Our full product line is still available online here on our site! Hit our store to order some of the best beans around.",
+      },
+      {
+         cardnum: "02",
+         title: "DONATE",
+         description:
+            "Since we've changed the way we operate to online only, and to ensure your safety, not all our staff is working. Donate to keep them afloat.",
+      },
+      {
+         cardnum: "03",
+         title: "BUY GIFT CARDS",
+         description:
+            "Feeling generous and what someone to experience the great flavors? Buy a gift card for someone looking to get a kick.",
+      },
+   ];
 
-  const boxContainer = ({cardnum, title, description}) => {
-    return(
-      <Box
-               className="box"
-               backgroundColor="whiteAlpha.50"
-               p={0}
-               m={2}
-               display="block"
-               width={['full','full','full','lg']}
-               flexGrow={1}
+   const boxContainer = ({ cardnum, title, description }) => {
+      return (
+         <Box
+            className="box"
+            backgroundColor="whiteAlpha.50"
+            p={0}
+            m={2}
+            display="block"
+            width={["full", "full", "full", "lg"]}
+            flexGrow={1}
+         >
+            <Box
+               height="70%"
+               display="flex"
+               flexDirection="column"
+               justifyContent="space-around"
+               alignItems="stretch"
+               backgroundColor="blackAlpha.700"
+               color="whiteAlpha.900"
+               borderRadius="5%"
             >
-               <Box
-                  height="70%"
-                  display="flex"
-                  flexDirection="column"
-                  justifyContent="space-around"
-                  alignItems="stretch"
-                  backgroundColor="blackAlpha.700"
-                  color="whiteAlpha.900"
-                  borderRadius="5%"
-               >
-                  <Heading textAlign="left" mt={5} ml={2}>
-                     {cardnum}
-                  </Heading>
-                  <Heading textAlign="center" size="lg" as="h2" margin="auto">
-                     {title}
-                  </Heading>
-                  <Icon
-                     name="copy"
-                     textAlign="left"
-                     display="block"
-                     margin="auto"
-                     mb={5}
-                  />
-               </Box>
-               <Text
+               <Heading textAlign="left" mt={5} ml={2}>
+                  {cardnum}
+               </Heading>
+               <Heading textAlign="center" size="lg" as="h2" margin="auto">
+                  {title}
+               </Heading>
+               <Icon
+                  name="copy"
                   textAlign="left"
-                  fontSize="sm"
                   display="block"
                   margin="auto"
-                  pt={5}
-                  color="gray.700"
-               >
-                  {description}
-               </Text>
+                  mb={5}
+               />
             </Box>
-    )
-  }
-  
+            <Text
+               textAlign="left"
+               fontSize="sm"
+               display="block"
+               margin="auto"
+               pt={5}
+               color="gray.700"
+            >
+               {description}
+            </Text>
+         </Box>
+      );
+   };
+
    return (
       <Box
          className="support-container"
@@ -67,7 +81,7 @@ export default function Support() {
          minHeight="550px"
       >
          <Flex
-            className='suport-heading'
+            className="suport-heading"
             width="100%"
             flexDirection="row"
             justifyContent="space-between"
@@ -90,16 +104,16 @@ export default function Support() {
          <Flex
             className="support-card-container"
             width="100%"
-            flexDirection={['column','column',"row"]}
+            flexDirection={["column", "column", "row"]}
             justifyContent="center"
-            height={['6xl','6xl', "lg"]}
-            px={[4,4,10,32]}
+            height={["6xl", "6xl", "lg"]}
+            px={[4, 4, 10, 32]}
             alignItems="stretch"
             backgroundColor="whiteAlpha.900"
          >
-          {boxItems.map((item)=> {
-            return boxContainer(item)
-          })}
+            {boxItems.map((item) => {
+               return boxContainer(item);
+            })}
          </Flex>
       </Box>
    );
