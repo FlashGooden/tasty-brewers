@@ -34,6 +34,7 @@ export default function Support() {
             width={["full", "full", "full", "lg"]}
             flexGrow={1}
          >
+           
             <Box
                height="70%"
                display="flex"

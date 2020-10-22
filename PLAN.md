@@ -16,3 +16,5 @@
 # Create footer
 
 # Create Popover Menu overlay for smaller screens
+
+# Deploy on AWS amplify with CI/CD integration
