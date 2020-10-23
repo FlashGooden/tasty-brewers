@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Text, Flex, Heading, Button, Image } from "@chakra-ui/core";
-import SafeImage from "../assets/safe-coffee.jpg";
+import SafeImage from "../../assets/safe-coffee.jpg";
 
 
 export default function SafeComponent() {

@@ -23,9 +23,10 @@ export default function Support() {
       },
    ];
 
-   const boxContainer = ({ cardnum, title, description }) => {
+   const boxContainer = ({ cardnum, title, description },index) => {
       return (
          <Box
+            key={index}
             className="box"
             backgroundColor="whiteAlpha.50"
             p={0}
@@ -34,7 +35,7 @@ export default function Support() {
             width={["full", "full", "full", "lg"]}
             flexGrow={1}
          >
-           
+
             <Box
                height="70%"
                display="flex"
@@ -112,8 +113,8 @@ export default function Support() {
             alignItems="stretch"
             backgroundColor="whiteAlpha.900"
          >
-            {boxItems.map((item) => {
-               return boxContainer(item);
+            {boxItems.map((item,index) => {
+               return boxContainer(item,index);
             })}
          </Flex>
       </Box>

@@ -53,7 +53,7 @@ export const Hero1 = () => (
          flexDirection="column"
          justifyContent="center"
       >
-         <Heading as="h1" size="xl" textAlign="left" width="70%">
+         <Heading as="h1" fontSize={['xl',"6xl"]} textAlign="left" width={['60%',"60","70%"]}>
             Brewing Coffee Since 1959.
          </Heading>
          <Text textAlign="left" mt={5} width="70%">

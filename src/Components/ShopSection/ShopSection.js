@@ -12,9 +12,10 @@ const products = () => {
    ];
 };
 
-const productCard = ({name, price, img}) => {
+const productCard = ({name, price, img},index) => {
    return (
       <Box
+          key={index}
          display="flex"
          minWidth="30%"
          p={0}
@@ -22,6 +23,7 @@ const productCard = ({name, price, img}) => {
          justifyContent="center"
          alignItems="center"
          className="product-container"
+         mb={12}
       >
          <Image height="xs" width="sm" className="product-image" src={img} />
          <Text
@@ -65,12 +67,12 @@ export default function ShopSection() {
          </Flex>
          <Flex
             className="product-list"
-            justifyContent="space-between"
+            justifyContent={["center","center","space-between", "space-between"]}
             flexWrap="wrap"
             m={10}
          >
-            {products().map((product)=> {
-             return productCard(product)
+            {products().map((product,index)=> {
+             return productCard(product,index)
             })}
          </Flex>
          <Button textAlign="center" m="auto" display="block" mb={10}>
