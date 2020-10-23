@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:      
      matrix:        
-      node-version: [13.x]
+      node-version: [13.x, 11.x]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -51,7 +51,7 @@ jobs:
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_PRODUCTION_BUCKET_NAME }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
           SOURCE_DIR: "build"
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
